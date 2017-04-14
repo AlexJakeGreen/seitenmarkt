@@ -69,7 +69,9 @@ function openBG() {
 function closeBG() {
     document.getElementById("blog").style.left = "-2500px";
 }
-
+function alert(){
+    document.getElementById('alert').style.display = "block";
+    }
 <!-- slider  logo-->
 $('.carousel').carousel();
 

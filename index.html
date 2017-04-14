@@ -494,7 +494,13 @@
 
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <button type="submit" class="btn btn-warning pull-right">absenden</button>
+                                    <div id="alert" class="alert alert-success" role="alert"style="display: none">Message sent
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <button type="submit" class="btn btn-warning pull-right" onclick="alert()" >absenden
+                                    </button>
                                 </div>
                             </div>
 
