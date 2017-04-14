@@ -30,6 +30,7 @@ $(document).ready(function () {
 $(document).on('click', function () {
     $('.collapse').collapse('hide');
 });
+
 <!-- Overlay page -->
 function openNav() {
     document.getElementById("warumWir").style.width = "100%";
