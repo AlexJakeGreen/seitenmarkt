@@ -257,6 +257,8 @@ p:first-letter {
     text-transform: uppercase;
     color: #525252;
     font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin: 70px 0 70px 0;
 }
 
 .logo {
@@ -268,7 +270,7 @@ p:first-letter {
     -ms-transition: all .5s ease;
     transition: all .5s ease;
     cursor: pointer;
-}
+    }
 
 .logo:hover {
     filter: none; /* IE6-9 */
@@ -279,20 +281,10 @@ p:first-letter {
     color: red;
 }
 
-.legend {
-    text-align: center;
-    margin-top: 70px;
-}
-
 .item img {
     width: 76px;
 }
 
-.arr {
-    text-align: center;
-    margin-top: 30px;
-
-}
 
 .author {
     text-align: right;
@@ -582,17 +574,20 @@ p:first-letter {
 .warum a:hover, .warum a:focus {
     color: #000000;
 }
-.lp a:hover, .lp:focus{
-    color: #000;
-}
-.uw a:hover, .uw a:focus{
-    color: #000000;
-}
-.bg a:hover, .bg a:focus{
+
+.lp a:hover, .lp:focus {
     color: #000;
 }
 
-    /* Position the close button (top right corner) */
+.uw a:hover, .uw a:focus {
+    color: #000000;
+}
+
+.bg a:hover, .bg a:focus {
+    color: #000;
+}
+
+/* Position the close button (top right corner) */
 .warum .closebtn, .lp .closebtn, .uw .closebtn, .os .closebtn, .bg .closebtn {
     position: absolute;
     top: -10px;
