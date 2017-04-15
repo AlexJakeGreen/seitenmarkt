@@ -75,3 +75,54 @@ function alert(){
 $('.carousel').carousel();
 
 
+// Contact Me
+$(document).ready(function() {
+    $('form#contact_form').submit(function(event){
+
+        // get values from FORM
+        var name = $("input[name=first_name]").val();
+        var email = $("input[name=email]").val();
+        var phone = $("input[name=phone]").val();
+        var message = $("textarea[name=comment]").val();
+        var firstName = name; // For Success/Failure Message
+        // Check for white space in name for Success/Fail message
+        if (firstName.indexOf(' ') >= 0) {
+            firstName = name.split(' ').slice(0, -1).join(' ');
+        }
+
+        $.ajax({
+            type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+            url: 'https://seitenmarkt.de/contact_us', // the url where we want to POST
+            data: {
+                name: name,
+                phone: phone,
+                email: email,
+                comment: message
+            },
+            dataType: 'json', // what type of data do we expect back from the server
+            encode: true,
+            cache: false,
+            success: function() {
+                // Success message
+                $('#success').html("<div class='alert alert-success'>");
+                $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
+                $('#success > .alert-success').append("<strong>Your message has been sent. </strong>");
+                $('#success > .alert-success').append('</div>');
+                //clear all fields
+                $('form#contact_form').trigger("reset");
+            },
+            error: function() {
+                // Fail message
+                $('#success').html("<div class='alert alert-danger'>");
+                $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
+                $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
+                $('#success > .alert-danger').append('</div>');
+                //clear all fields
+                $('form#contact_form').trigger("reset");
+            }
+        })
+            // .done(function(data) { console.log(name, phone, email, message); });
+
+        event.preventDefault();
+    })
+})
