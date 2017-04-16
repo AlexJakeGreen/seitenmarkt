@@ -1,4 +1,3 @@
-
 <!-- Animation WOW  -->
 new WOW().init();
 <!-- Scrollign  -->
@@ -33,6 +32,19 @@ $(document).on('click', function () {
 <!-- Overlay page -->
 function openNav() {
     document.getElementById("warumWir").style.width = "100%";
+    $('#warumWir').bind('mousewheel DOMMouseScroll', function (e) {
+        var scrollTo = null;
+        if (e.type == 'mousewheel') {
+            scrollTo = (e.originalEvent.wheelDelta * -1);
+        }
+        else if (e.type == 'DOMMouseScroll') {
+            scrollTo = 40 * e.originalEvent.detail;
+        }
+        if (scrollTo) {
+            e.preventDefault();
+            $(this).scrollTop(scrollTo + $(this).scrollTop());
+        }
+    });
 }
 function closeNav() {
     document.getElementById("warumWir").style.width = "0%";
@@ -40,15 +52,39 @@ function closeNav() {
 
 function openLP() {
     document.getElementById("lanp").style.left = "0";
-    document.body.style.overflow = "hidden"
+    $('#lanp').bind('mousewheel DOMMouseScroll', function (e) {
+        var scrollTo = null;
+        if (e.type == 'mousewheel') {
+            scrollTo = (e.originalEvent.wheelDelta * -1);
+        }
+        else if (e.type == 'DOMMouseScroll') {
+            scrollTo = 40 * e.originalEvent.detail;
+        }
+        if (scrollTo) {
+            e.preventDefault();
+            $(this).scrollTop(scrollTo + $(this).scrollTop());
+        }
+    });
 }
 
 function closeLP() {
     document.getElementById("lanp").style.left = "-2500px";
-    document.body.style.overflow = "auto"
 }
 function openOS() {
     document.getElementById("onshp").style.left = "0";
+    $('#onshp').bind('mousewheel DOMMouseScroll', function (e) {
+        var scrollTo = null;
+        if (e.type == 'mousewheel') {
+            scrollTo = (e.originalEvent.wheelDelta * -1);
+        }
+        else if (e.type == 'DOMMouseScroll') {
+            scrollTo = 40 * e.originalEvent.detail;
+        }
+        if (scrollTo) {
+            e.preventDefault();
+            $(this).scrollTop(scrollTo + $(this).scrollTop());
+        }
+    });
 }
 
 function closeOS() {
@@ -57,6 +93,19 @@ function closeOS() {
 
 function openUW() {
     document.getElementById("untw").style.left = "0";
+    $('#untw').bind('mousewheel DOMMouseScroll', function (e) {
+        var scrollTo = null;
+        if (e.type == 'mousewheel') {
+            scrollTo = (e.originalEvent.wheelDelta * -1);
+        }
+        else if (e.type == 'DOMMouseScroll') {
+            scrollTo = 40 * e.originalEvent.detail;
+        }
+        if (scrollTo) {
+            e.preventDefault();
+            $(this).scrollTop(scrollTo + $(this).scrollTop());
+        }
+    });
 }
 
 function closeUW() {
@@ -65,21 +114,32 @@ function closeUW() {
 
 function openBG() {
     document.getElementById("blog").style.left = "0";
+    $('#blog').bind('mousewheel DOMMouseScroll', function (e) {
+        var scrollTo = null;
+        if (e.type == 'mousewheel') {
+            scrollTo = (e.originalEvent.wheelDelta * -1);
+        }
+        else if (e.type == 'DOMMouseScroll') {
+            scrollTo = 40 * e.originalEvent.detail;
+        }
+        if (scrollTo) {
+            e.preventDefault();
+            $(this).scrollTop(scrollTo + $(this).scrollTop());
+        }
+    });
 }
 
 function closeBG() {
     document.getElementById("blog").style.left = "-2500px";
 }
-function alert(){
-    document.getElementById('alert').style.display = "block";
-    }
+
 <!-- slider  logo-->
 $('.carousel').carousel();
 
 
 // Contact Me
-$(document).ready(function() {
-    $('form#contact_form').submit(function(event){
+$(document).ready(function () {
+    $('form#contact_form').submit(function (event) {
 
         // get values from FORM
         var name = $("input[name=first_name]").val();
@@ -104,7 +164,7 @@ $(document).ready(function() {
             dataType: 'json', // what type of data do we expect back from the server
             encode: true,
             cache: false,
-            success: function() {
+            success: function () {
                 // Success message
                 $('#success').html("<div class='alert alert-success'>");
                 $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
@@ -113,7 +173,7 @@ $(document).ready(function() {
                 //clear all fields
                 $('form#contact_form').trigger("reset");
             },
-            error: function() {
+            error: function () {
                 // Fail message
                 $('#success').html("<div class='alert alert-danger'>");
                 $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
@@ -122,9 +182,9 @@ $(document).ready(function() {
                 //clear all fields
                 $('form#contact_form').trigger("reset");
             }
-        })
-            // .done(function(data) { console.log(name, phone, email, message); });
+        });
+        // .done(function(data) { console.log(name, phone, email, message); });
 
         event.preventDefault();
     })
-})
+});

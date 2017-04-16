@@ -551,7 +551,7 @@ p:first-letter {
     transition: .9s; /* 0.5 second transition effect to slide in or slide down the warum (height or width, depending on reveal) */
 }
 
-.lp, .uw, .os, .bg {
+.lp, .uw, .os, .bg{
     /* Height & width depends on how you want to reveal the uw (see JS below) */
     height: 100%;
     width: 100%;
