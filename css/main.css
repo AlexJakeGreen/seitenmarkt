@@ -564,7 +564,7 @@ p:first-letter {
     transition: 2s; /* 0.5 second transition effect to slide in or slide down the uw(height or width, depending on reveal) */
 }
 
-/* Position the content inside the bg */
+/* Position the content inside the overlay */
 .warum-content, .lp-content, .uw-content, .os-content, .bg-content {
     position: relative;
     top: 0; /* 25% from the top */
@@ -573,7 +573,7 @@ p:first-letter {
     margin-top: 20px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 
-/* The navigation links inside the bg */
+/* The navigation links inside the overlay */
 .warum a, .lp a, .uw a, .os a, .bg a {
     padding: 5px;
     text-decoration: none;
