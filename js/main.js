@@ -40,10 +40,12 @@ function closeNav() {
 
 function openLP() {
     document.getElementById("lanp").style.left = "0";
+    document.body.style.overflow = "hidden"
 }
 
 function closeLP() {
     document.getElementById("lanp").style.left = "-2500px";
+    document.body.style.overflow = "auto"
 }
 function openOS() {
     document.getElementById("onshp").style.left = "0";

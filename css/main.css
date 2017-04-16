@@ -234,13 +234,23 @@ p:first-letter {
 #angebot img {
     width: 75%;
 }
+#angebot img:hover{
+    opacity: .8;
+}
 
 #angebot ul {
     margin-top: 3em;
 }
+#angebot a{
+    color: #717171;
+}
+#angebot a:hover{
+    color: #000000;
+}
+
 
 .icon {
-    margin: 9em 0 3em 0;
+    margin: 12em 0 3em 0;
 }
 
 #uberuns {
