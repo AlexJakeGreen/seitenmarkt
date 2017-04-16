@@ -127,27 +127,27 @@ p:first-letter {
 }
 
 .cd-fixed-bg.cd-bg-1 {
-    background-image: url("../img/cd-background-1.png");
+    background-image: url("../img/cd-background-1.jpg");
 }
 
 .cd-fixed-bg.cd-bg-2 {
-    background-image: url("../img/cd-background-2.png")
+    background-image: url("../img/cd-background-2.jpg")
 }
 
 .cd-fixed-bg.cd-bg-3 {
-    background-image: url("../img/cd-background-3.png")
+    background-image: url("../img/cd-background-3.jpg")
 }
 
 .cd-fixed-bg.cd-bg-4 {
-    background-image: url("../img/cd-background-4.png")
+    background-image: url("../img/cd-background-4.jpg")
 }
 
 .cd-fixed-bg.cd-bg-5 {
-    background-image: url("../img/cd-background-5.png")
+    background-image: url("../img/cd-background-5.jpg")
 }
 
 .cd-fixed-bg.cd-bg-6 {
-    background-image: url("../img/cd-background-6.png")
+    background-image: url("../img/cd-background-6.jpg")
 }
 
 /* цвет фона и рамки навигационного меню */
@@ -244,7 +244,7 @@ p:first-letter {
 }
 
 #uberuns {
-    background: url("../img/fone.png") no-repeat;
+    background: url("../img/fone.jpg") no-repeat;
     background-size: cover;
     position: relative
 }
