@@ -132,6 +132,26 @@ function openBG() {
 function closeBG() {
     document.getElementById("blog").style.left = "-2500px";
 }
+function openDT() {
+    document.getElementById("date").style.left = "0";
+    $('#blog').bind('mousewheel DOMMouseScroll', function (e) {
+        var scrollTo = null;
+        if (e.type == 'mousewheel') {
+            scrollTo = (e.originalEvent.wheelDelta * -1);
+        }
+        else if (e.type == 'DOMMouseScroll') {
+            scrollTo = 40 * e.originalEvent.detail;
+        }
+        if (scrollTo) {
+            e.preventDefault();
+            $(this).scrollTop(scrollTo + $(this).scrollTop());
+        }
+    });
+}
+
+function closeDT() {
+    document.getElementById("date").style.left = "-2500px";
+}
 
 <!-- slider  logo-->
 $('.carousel').carousel();

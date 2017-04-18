@@ -59,6 +59,7 @@ a:visited,
 a:active {
     color: #FFFFFF;
     text-decoration: none;
+
 }
 
 a:hover {
@@ -551,13 +552,13 @@ p:first-letter {
     transition: .9s; /* 0.5 second transition effect to slide in or slide down the warum (height or width, depending on reveal) */
 }
 
-.lp, .uw, .os, .bg{
+.lp, .uw, .os, .bg, .dt{
     /* Height & width depends on how you want to reveal the uw (see JS below) */
     height: 100%;
     width: 100%;
     position: fixed; /* Stay in place */
     z-index: 99999; /* Sit on top */
-    left: -2000px;
+    left: 2000px;
     top: 0;
     background-color: #FFFFFF;
     overflow-x: hidden; /* Disable horizontal scroll */
@@ -565,7 +566,7 @@ p:first-letter {
 }
 
 /* Position the content inside the overlay */
-.warum-content, .lp-content, .uw-content, .os-content, .bg-content {
+.warum-content, .lp-content, .uw-content, .os-content, .bg-content, .dt-content  {
     position: relative;
     top: 0; /* 25% from the top */
     width: 100%; /* 100% width */
@@ -574,7 +575,7 @@ p:first-letter {
 }
 
 /* The navigation links inside the overlay */
-.warum a, .lp a, .uw a, .os a, .bg a {
+.warum a, .lp a, .uw a, .os a, .bg a, .dt a {
     padding: 5px;
     text-decoration: none;
     color: #ff2000;
@@ -599,9 +600,16 @@ p:first-letter {
 .bg a:hover, .bg a:focus {
     color: #000;
 }
-
+.dt a:hover, .dt a:focus {
+    color: #000;
+    cursor: pointer;
+}
+.quicklinks li:hover{
+    color: #335288;
+    cursor: pointer;
+}
 /* Position the close button (top right corner) */
-.warum .closebtn, .lp .closebtn, .uw .closebtn, .os .closebtn, .bg .closebtn {
+.warum .closebtn, .lp .closebtn, .uw .closebtn, .os .closebtn, .bg .closebtn, .dt .closebtn {
     position: absolute;
     top: -10px;
     right: 35px;
