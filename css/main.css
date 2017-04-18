@@ -542,12 +542,12 @@ p:first-letter {
     /* Height & width depends on how you want to reveal the warum (see JS below) */
     width: 0;
     height: 100%;
+    padding-top: 150px;
     position: fixed; /* Stay in place */
     z-index: 99999; /* Sit on top */
     left: 0;
     top: 0;
-    background-color: rgb(230, 255, 165);
-    background-color: rgba(230, 255, 165, 0.9);
+    background-color: rgba(149, 236, 158, 0.9);
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: .9s; /* 0.5 second transition effect to slide in or slide down the warum (height or width, depending on reveal) */
 }
@@ -660,6 +660,8 @@ p:first-letter {
 .UpTop:hover {
     opacity: 1;
 }
+
+
 
 /*-----iPad in portrait & landscape-------------*/
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
