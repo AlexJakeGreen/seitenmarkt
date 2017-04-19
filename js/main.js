@@ -156,6 +156,35 @@ function closeDT() {
 <!-- slider  logo-->
 $('.carousel').carousel();
 
+<!-- portofolio-->
+$('.tabs:nth-child(1)').click(function () {
+    if ($("#logos").is(":hidden")) {
+
+        $("#logos").show();
+
+    } else {
+
+        $("#logos").slideUp();
+
+    }
+    return false;
+
+});
+
+$('.tabs:nth-child(2)').click(function () {
+    if ($("#webs").is(":hidden")) {
+
+        $("#webs").show();
+
+    } else {
+
+        $("#webs").slideUp();
+
+    }
+    return false;
+
+});
+
 
 // Contact Me
 $(document).ready(function () {

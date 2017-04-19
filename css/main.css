@@ -235,20 +235,22 @@ p:first-letter {
 #angebot img {
     width: 75%;
 }
-#angebot img:hover{
+
+#angebot img:hover {
     opacity: .8;
 }
 
 #angebot ul {
     margin-top: 3em;
 }
-#angebot a{
+
+#angebot a {
     color: #717171;
 }
-#angebot a:hover{
+
+#angebot a:hover {
     color: #000000;
 }
-
 
 .icon {
     margin: 12em 0 3em 0;
@@ -296,9 +298,9 @@ p:first-letter {
     color: red;
 }
 
-/*.item img {*/
-    /*width: 76px;*/
-/*}*/
+.item img {
+    width: 76px;
+}
 
 .author {
     text-align: right;
@@ -307,7 +309,7 @@ p:first-letter {
 }
 
 .marg {
-    margin: 35px 0 20px 0;
+    margin: 50px 0 30px 0;
 }
 
 /*----Стрелка наверх-----*/
@@ -434,6 +436,49 @@ p:first-letter {
     font-size: 18px;
 }
 
+.tabs {
+    background: #ff6a00;
+    width: 250px;
+    display: inline-block;
+    padding: 15px 25px 15px 25px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.tabs:nth-child(1) {
+    background: #39c2d7;
+    border-bottom-left-radius: 5px;
+}
+
+.tabs:nth-child(2) {
+    border-bottom-right-radius: 5px;
+}
+
+.tabs:nth-child(1):hover {
+    color: black;
+    background: #32a4b9;;
+
+}
+
+.tabs:hover {
+    color: black;
+    background: #df5000;
+}
+
+#logos img {
+    width: 50%;
+    box-shadow: 1px 2px 10px #666666;
+}
+
+#logos img:hover {
+    cursor: pointer;
+    transition: 1s;
+    transform: scale(1.5);
+
+}
+
 .cont-img {
     position: relative;
     width: 100%;
@@ -513,7 +558,8 @@ p:first-letter {
 
 .maps {
     position: relative;
-    background-image: url(../img/maps.png)
+    background-image: url(../img/maps.png);
+
 }
 
 .maps h2, .maps h3 {
@@ -552,13 +598,13 @@ p:first-letter {
     transition: .9s; /* 0.5 second transition effect to slide in or slide down the warum (height or width, depending on reveal) */
 }
 
-.lp, .uw, .os, .bg, .dt{
+.lp, .uw, .os, .bg, .dt {
     /* Height & width depends on how you want to reveal the uw (see JS below) */
     height: 100%;
     width: 100%;
     position: fixed; /* Stay in place */
     z-index: 99999; /* Sit on top */
-    left: 2000px;
+    left: 2200px;
     top: 0;
     background-color: #FFFFFF;
     overflow-x: hidden; /* Disable horizontal scroll */
@@ -566,7 +612,7 @@ p:first-letter {
 }
 
 /* Position the content inside the overlay */
-.warum-content, .lp-content, .uw-content, .os-content, .bg-content, .dt-content  {
+.warum-content, .lp-content, .uw-content, .os-content, .bg-content, .dt-content {
     position: relative;
     top: 0; /* 25% from the top */
     width: 100%; /* 100% width */
@@ -600,14 +646,17 @@ p:first-letter {
 .bg a:hover, .bg a:focus {
     color: #000;
 }
+
 .dt a:hover, .dt a:focus {
     color: #000;
     cursor: pointer;
 }
-.quicklinks li:hover{
+
+.quicklinks li:hover {
     color: #335288;
     cursor: pointer;
 }
+
 /* Position the close button (top right corner) */
 .warum .closebtn, .lp .closebtn, .uw .closebtn, .os .closebtn, .bg .closebtn, .dt .closebtn {
     position: absolute;
@@ -810,7 +859,7 @@ p:first-letter {
         width: 20%;
     }
 
-    .warum .closebtn, .lp .closebtn, .uw .closebtn, .os .closebtn, .bg .closebtn {
+    .warum .closebtn, .lp .closebtn, .uw .closebtn, .os .closebtn, .bg .closebtn, .dt .closebtn {
 
         right: 15px;
     }
