@@ -475,7 +475,7 @@ p:first-letter {
 #logos img:hover {
     cursor: pointer;
     transition: 1s;
-    transform: scale(1.5);
+    transform: scale(1.7);
 
 }
 
