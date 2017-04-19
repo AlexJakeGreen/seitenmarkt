@@ -296,9 +296,9 @@ p:first-letter {
     color: red;
 }
 
-.item img {
-    width: 76px;
-}
+/*.item img {*/
+    /*width: 76px;*/
+/*}*/
 
 .author {
     text-align: right;
@@ -660,8 +660,6 @@ p:first-letter {
 .UpTop:hover {
     opacity: 1;
 }
-
-
 
 /*-----iPad in portrait & landscape-------------*/
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
