@@ -558,7 +558,8 @@ p:first-letter {
 
 .maps {
     position: relative;
-    background-image: url(../img/maps.png);
+    background: url(../img/maps.png) no-repeat;
+    background-size: cover;
 
 }
 
