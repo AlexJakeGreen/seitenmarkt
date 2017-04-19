@@ -491,6 +491,11 @@ p:first-letter {
     height: auto;
     transition: .9s ease;
     backface-visibility: hidden;
+    box-shadow: 1px 1px 15px #4d4d4d;
+}
+.image:hover{
+    cursor: pointer;
+    transform: scale(.9);
 }
 
 .middle {
@@ -509,7 +514,8 @@ p:first-letter {
 }
 
 .cont-img:hover .image {
-    opacity: 0.3;
+    opacity: 0.65;
+    transform: scale(.9);
 }
 
 .cont-img:hover .middle {
