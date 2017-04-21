@@ -151,7 +151,32 @@ function openDT() {
 
 function closeDT() {
     document.getElementById("date").style.left = "-2500px";
+
 }
+
+
+
+function openKFB() {
+    document.getElementById('blog').style.left = "-2500px";
+    document.location.href = "#kontaktformular";
+
+}
+function openKFU() {
+    document.getElementById('untw').style.left = "-2500px";
+    document.location.href = "#kontaktformular";
+
+}
+function openKFO() {
+    document.getElementById('onshp').style.left = "-2500px";
+    document.location.href = "#kontaktformular";
+
+}
+function openKFLP() {
+    document.getElementById('lanp').style.left = "-2500px";
+    document.location.href = "#kontaktformular";
+
+}
+
 
 <!-- slider  logo-->
 $('.carousel').carousel();

@@ -611,7 +611,7 @@ p:first-letter {
     width: 100%;
     position: fixed; /* Stay in place */
     z-index: 99999; /* Sit on top */
-    left: 0px;
+    left: 2200px;
     top: 0;
     background-color: #FFFFFF;
     overflow-x: hidden; /* Disable horizontal scroll */
