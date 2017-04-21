@@ -874,6 +874,11 @@ p:first-letter {
     .warum-content, .lp-content, .bg-content {
         margin-top: 35px; /* 30px top margin to avoid conflict with the close button on smaller screens */
     }
+    .warum {
+        /* Height & width depends on how you want to reveal the warum (see JS below) */
+        padding-top: 35px;
+
+    }
 
     .img-over {
         width: 100%;
