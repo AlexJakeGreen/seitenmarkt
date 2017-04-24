@@ -182,31 +182,28 @@ function openKFLP() {
 $('.carousel').carousel();
 
 <!-- portofolio-->
-$('.tabs:nth-child(1)').click(function () {
-    if ($("#logos").is(":hidden")) {
-
-        $("#logos").show();
-
-    } else {
-
-        $("#logos").slideUp();
-
+$('.tabs:nth-child(2)').click(function () {
+    if($('#webs').is(":visible")){
+        $('#webs').hide();
+        $('#logos').show();
     }
-    return false;
+    else
+        $('#logos').show();
 
 });
-
-$('.tabs:nth-child(2)').click(function () {
-    if ($("#webs").is(":hidden")) {
-
-        $("#webs").show();
-
-    } else {
-
-        $("#webs").slideUp();
-
+$('.tabs:nth-child(3)').click(function () {
+    if($('#logos').is(":visible")){
+        $('#logos').hide();
+        $('#webs').show()
     }
-    return false;
+    else
+        $('#webs').show()
+
+
+});
+$('.tabs:nth-child(4)').click(function () {
+    $('#logos').show();
+    $('#webs').show();
 
 });
 
