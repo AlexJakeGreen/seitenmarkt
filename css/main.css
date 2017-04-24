@@ -426,7 +426,7 @@ p:first-letter {
 .detail {
     line-height: 1.8;
     display: none;
-    text-align: justify;
+    /*text-align: justify;*/
 }
 
 .detaile-btn {
