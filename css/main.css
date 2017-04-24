@@ -440,7 +440,6 @@ p:first-letter {
 .tabs {
     padding: 15px 25px 15px 25px;
     text-transform: uppercase;
-    color: #FFFFFF;
     cursor: pointer;
     transition: .5s;
     color:lightseagreen;
