@@ -155,7 +155,6 @@ function closeDT() {
 }
 
 
-
 function openKFB() {
     document.getElementById('blog').style.left = "-2500px";
     document.location.href = "#kontaktformular";
@@ -183,7 +182,7 @@ $('.carousel').carousel();
 
 <!-- portofolio-->
 $('.tabs:nth-child(2)').click(function () {
-    if($('#webs').is(":visible")){
+    if ($('#webs').is(":visible")) {
         $('#webs').hide();
         $('#logos').show();
     }
@@ -191,22 +190,21 @@ $('.tabs:nth-child(2)').click(function () {
         $('#logos').show();
 
 });
+
 $('.tabs:nth-child(3)').click(function () {
-    if($('#logos').is(":visible")){
+    if ($('#logos').is(":visible")) {
         $('#logos').hide();
         $('#webs').show()
     }
     else
         $('#webs').show()
-
-
 });
+
 $('.tabs:nth-child(4)').click(function () {
     $('#logos').show();
     $('#webs').show();
 
 });
-
 
 // Contact Me
 $(document).ready(function () {
