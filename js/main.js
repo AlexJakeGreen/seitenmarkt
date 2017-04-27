@@ -132,10 +132,79 @@ function openBG() {
 function closeBG() {
     document.getElementById("blog").style.left = "-2500px";
 }
+function openDT() {
+    document.getElementById("date").style.left = "0";
+    $('#blog').bind('mousewheel DOMMouseScroll', function (e) {
+        var scrollTo = null;
+        if (e.type == 'mousewheel') {
+            scrollTo = (e.originalEvent.wheelDelta * -1);
+        }
+        else if (e.type == 'DOMMouseScroll') {
+            scrollTo = 40 * e.originalEvent.detail;
+        }
+        if (scrollTo) {
+            e.preventDefault();
+            $(this).scrollTop(scrollTo + $(this).scrollTop());
+        }
+    });
+}
+
+function closeDT() {
+    document.getElementById("date").style.left = "-2500px";
+
+}
+
+
+function openKFB() {
+    document.getElementById('blog').style.left = "-2500px";
+    document.location.href = "#kontaktformular";
+
+}
+function openKFU() {
+    document.getElementById('untw').style.left = "-2500px";
+    document.location.href = "#kontaktformular";
+
+}
+function openKFO() {
+    document.getElementById('onshp').style.left = "-2500px";
+    document.location.href = "#kontaktformular";
+
+}
+function openKFLP() {
+    document.getElementById('lanp').style.left = "-2500px";
+    document.location.href = "#kontaktformular";
+
+}
+
 
 <!-- slider  logo-->
 $('.carousel').carousel();
 
+<!-- portofolio-->
+$('.tabs:nth-child(2)').click(function () {
+    if ($('#webs').is(":visible")) {
+        $('#webs').hide();
+        $('#logos').show();
+    }
+    else
+        $('#logos').show();
+
+});
+
+$('.tabs:nth-child(3)').click(function () {
+    if ($('#logos').is(":visible")) {
+        $('#logos').hide();
+        $('#webs').show()
+    }
+    else
+        $('#webs').show()
+});
+
+$('.tabs:nth-child(4)').click(function () {
+    $('#logos').show();
+    $('#webs').show();
+
+});
 
 // Contact Me
 $(document).ready(function () {
@@ -168,16 +237,16 @@ $(document).ready(function () {
                 // Success message
                 $('#success').html("<div class='alert alert-success'>");
                 $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
-                $('#success > .alert-success').append("<strong>Your message has been sent. </strong>");
+                $('#success > .alert-success').append("<strong>Ihre Nachricht wurde gesendet. Unser Vertriebsmitarbeiter wird Sie bald kontaktieren.</strong>");
                 $('#success > .alert-success').append('</div>');
                 //clear all fields
                 $('form#contact_form').trigger("reset");
             },
-            error: function () {
+            error: function (message) {
                 // Fail message
                 $('#success').html("<div class='alert alert-danger'>");
                 $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
-                $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
+                $('#success > .alert-danger').append("<strong>Entschuldige bitte, bitte das Formular ausfüllen und fehlende Felder füllen.</strong>");
                 $('#success > .alert-danger').append('</div>');
                 //clear all fields
                 $('form#contact_form').trigger("reset");
@@ -188,3 +257,4 @@ $(document).ready(function () {
         event.preventDefault();
     })
 });
+
